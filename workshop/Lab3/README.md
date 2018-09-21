@@ -90,7 +90,7 @@ spec:
 (今回は閲覧のみで，値の変更はしません)
 
    ```console
-   $ kubectl edit deployment guestbook
+   $ kubectl edit deployment guestbook-v1
    ```
 
 上記の操作で，KubernetesサーバーからDeploymentの最新の構成情報を検索し，編集できます。使用していた元のyamlファイル(`guestbook-deployment.yaml`)に比べて多数のフィールドが含まれていることに気づくでしょう。これは我々が直接指定した値だけでなく，Kubernetesが知っているDeploymentに関する全てのプロパティを含むためです。
