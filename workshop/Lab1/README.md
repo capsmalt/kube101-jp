@@ -9,10 +9,14 @@ Kubernetesクラスター (IBM Cloud Kubernetes Service)へのアプリケーシ
     ["IBM Cloud Developer Tools のインストール方法"](https://console.bluemix.net/docs/cli/index.html#overview) に従い，ご利用されているOSに合わせたコマンドを実行してください。
 
 2. K8sクラスターの作成 **(※セミナー会場にて実施済のため不要)**
-    
+
     ibmcloudコマンドで作成する場合は， `$ ibmcloud cs cluster-create --name <name-of-cluster>` コマンドを実行します。
 
-3. 接続情報の取得
+3. CLI で IBM Cloudにログイン
+
+    `$ ibmcloud login` (Windowsの方は，コマンドプロンプトやTeraTermなどをご利用ください)
+
+4. 接続情報の取得
    
     `$ ibmcloud cs cluster-config <name-of-cluster>` を実行し，K8sクラスターへの接続情報を取得します。
 
@@ -26,12 +30,21 @@ Kubernetesクラスター (IBM Cloud Kubernetes Service)へのアプリケーシ
     export KUBECONFIG=/Users/capsair/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml
     ```
  
-4. 3.で取得した `KUBECONFIG` の情報をexportします。
+5. 4.で取得した `KUBECONFIG` の情報をexportします
 
     `$ export KUBECONFIG=/Users/capsair/.bluemix/plugins/container-service/clusters/mycluster/kube-config-hou02-mycluster.yml`
 
     ※K8sクラスターを操作する際には，Kubernetesのクライアント用CLI `kubectl` を使用します。その際にKUBECONFIGの接続情報が必要になります。
 
+6. K8sクラスターに対する接続できるか確認します
+    
+    ```bash.sh
+    $ kubectl get nodes
+    NAME           STATUS    ROLES     AGE       VERSION
+    10.77.155.98   Ready     <none>    2d        v1.10.7+IKS
+    
+    上記のように，K8sクラスターの情報(IPアドレス，STATUS，など)が得られればOKです
+    ```
 
 # 1. K8sクラスターへのアプリケーションデプロイ
 
