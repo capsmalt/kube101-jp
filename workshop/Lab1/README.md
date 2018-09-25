@@ -14,7 +14,7 @@ Kubernetesクラスター (IBM Cloud Kubernetes Service)へのアプリケーシ
 
 3. CLI で IBM Cloudにログイン
 
-    `$ ibmcloud login` (Windowsの方は，コマンドプロンプトやTeraTermなどをご利用ください)
+    `$ ibmcloud login` (Windowsの方は，**コマンドプロンプト**やTeraTermなどをご利用ください)
 
 4. 接続情報の取得
    
