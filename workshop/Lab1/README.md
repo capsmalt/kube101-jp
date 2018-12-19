@@ -14,7 +14,7 @@ Kubernetesクラスター (IBM Cloud Kubernetes Service)へのアプリケーシ
 
 3. CLI で IBM Cloudにログイン
 
-    `$ ibmcloud login` (Windowsの方は，**コマンドプロンプト**やTeraTermなどをご利用ください)
+    `$ ibmcloud login` (Windowsの方は，PowerShellではなく**コマンドプロンプト**をご利用ください)
 
 4. 接続情報の取得
    
@@ -36,7 +36,7 @@ Kubernetesクラスター (IBM Cloud Kubernetes Service)へのアプリケーシ
 
     ※K8sクラスターを操作する際には，Kubernetesのクライアント用CLI `kubectl` を使用します。その際にKUBECONFIGの接続情報が必要になります。
 
-6. K8sクラスターに対する接続できるか確認します
+6. K8sクラスターに接続できるか確認します
     
     ```bash.sh
     $ kubectl get nodes
